@@ -1,0 +1,62 @@
+{
+  "name": "geotab-device-import",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-class-properties"
+      ]
+    ]
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "NODE_ENV='production' webpack",
+    "build-for-windows": "SET NODE_ENV='production' && webpack",
+    "deploy": "npm run build && s3-deploy './dist/index_bundle.*' --cwd './dist/' --region us-east-1 --bucket geotab-device-import --private --etag --distId EB65DU6KQ5QIG --invalidate '/index_bundle.js /index_bundle.js.map'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "axios": "^0.18.0",
+    "bootstrap": "^4.3.1",
+    "dotenv": "^6.1.0",
+    "dotenv-webpack": "^1.5.7",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7",
+    "prop-types": "^15.6.2",
+    "query-string": "^6.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-dropzone": "^10.0.0",
+    "react-router-dom": "^4.3.1",
+    "react-select": "^2.2.0",
+    "spectre.css": "^0.5.8",
+    "xlsx": "^0.14.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.4",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "html-webpack-plugin": "^3.2.0",
+    "mocker-api": "^1.6.6",
+    "node-sass": "^4.11.0",
+    "s3-deploy": "^1.1.6",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  }
+}

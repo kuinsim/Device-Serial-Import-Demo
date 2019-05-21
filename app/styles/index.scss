@@ -1,0 +1,56 @@
+#device-serial-import-demo-app
+{
+  .main-container {
+    max-width: 70%;
+    margin: 0 auto;
+  }
+
+  .form-container {
+    max-width: 80%;
+    margin: 0 auto;
+    border: 3px solid #ccc;
+    padding: 10px 20px 75px 20px;
+    border-radius: 10px;
+  }
+
+  .form-label.capitalize {
+    text-transform: capitalize;
+  }
+
+  .form-input {
+    height: 150px;
+    max-width: 100%
+  }
+
+  input[type=submit],
+  .btn-link {
+    margin-top: 20px;
+  }
+
+  .dropzone {
+    border: 2px dashed #dedede;
+    border-radius: 5px;
+    background: #f5f5f5;
+  }
+  
+  .dropzone i{
+    font-size: 5rem;
+  }
+  
+  .dropzone .dz-message {
+    color: rgba(0,0,0,.54);
+    font-weight: 500;
+    font-size: initial;
+    text-transform: uppercase;
+  }
+
+  .far {
+    display:inline-block;
+    font-size: 50px;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
